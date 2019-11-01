@@ -1,8 +1,5 @@
-Code of the paper  Ranjan Mondal, Deepayan Chakraborty and Bhabatosh Chanda "Learning 2D Morphological Network for Old Document Image Binarization"
+#Code of the paper:  Ranjan Mondal, Deepayan Chakraborty and Bhabatosh Chanda "Learning 2D Morphological Network for Old Document Image Binarization"
 
-TODO: 
-
-# Code of the paper "Morphological Networks for Image De-raining"
 
 | Input   and  Output    | 
 |:--------------------------:|
