@@ -1,6 +1,7 @@
 
 
-#Code of the paper "Learning 2D Morphological Network for Old Document Image Binarization"
+# Code of the paper "Learning 2D Morphological Network for Old Document Image Binarization"
+
 | Input   and  Output    | 
 |:--------------------------:|
 | ![input](https://dmtyylqvwgyxw.cloudfront.net/instances/132/uploads/images/photo/image/57150/large_871b49bd-3580-4ba1-a4a4-ac7842fb64ee.?v=1562226416)|
