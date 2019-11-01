@@ -28,24 +28,35 @@ TODO:
 $ cd src/
 $ python test.py  <old_binary_image_dir>   <ground_truth_dir>
 ```
-This runs the code in the supplied images.
+This runs the code in the supplied images	 and ground truth images.
 ```
 $python run.py ./data/input_images/ ./data/output/
-
+```
+This  generates the output only 
+```
+We encourange to train the model from  start by using the file train_model.py 
+Set the data path in generator.py
+call the function train_model()
 ```
 
 ## Files
 ```
-
-.
 ├── bwmorph_thin.py
 ├── Dssim.py
 ├── generator.py
-├── morph_layers2D.py
-├── run.py
-├── test.py
-├── train_model1.py
-├── train_model.py
+├── images
+│   ├── input
+│   └── output
+├── models	#all the trained models
+│   ├── model_weights1.h5
+│   ├── model_weights_DIBCO.h5
+│   ├── model_weights.h5
+│   ├── model_weights_isi1.h5
+│   └── model_weights_isi.h5
+├── morph_layers2D.py			#defined morphologcal layers
+├── run.py				
+├── test.py				#to test the models,gven input and ground truth
+├── train_model.py			#to tain the model 
 └── utils.py
 
 ```
