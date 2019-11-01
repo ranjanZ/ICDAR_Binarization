@@ -4,8 +4,8 @@ TODO:
 
 # Code of the paper "Morphological Networks for Image De-raining"
 
-| Input        | De-Rained      | 
-|:-------------:|:-------------:|
+| Input   and  Output    | 
+|:--------------------------:|
 | ![input](https://dmtyylqvwgyxw.cloudfront.net/instances/132/uploads/images/photo/image/57150/large_871b49bd-3580-4ba1-a4a4-ac7842fb64ee.?v=1562226416)|
 
 
@@ -13,7 +13,6 @@ TODO:
 
 
 
-| ![input](https://raw.githubusercontent.com/ranjanZ/2D-Morphological-Network/master/data/input_images/52_in.png)| ![De-Rained](https://raw.githubusercontent.com/ranjanZ/2D-Morphological-Network/master/data/output/52_4small.png) |
 
 ## Dependency
 * For Running
