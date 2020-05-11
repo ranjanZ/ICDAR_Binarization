@@ -11,6 +11,9 @@ import keras.backend as K
 
 def test_img(model,img,patch_size=(256,256,3),stride=(10,10)):
     a,b,_=img.shape
+    if(min(img.shape)<256):
+        print("image size is <256")
+        return(False,-1,-1)
     idy=np.r_[0:a-patch_size[0]:stride[0]]
     idx=np.r_[0:b-patch_size[1]:stride[1]]
     idy=np.append(idy,a-patch_size[0])

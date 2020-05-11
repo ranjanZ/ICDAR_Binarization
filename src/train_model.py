@@ -23,7 +23,6 @@ from keras.callbacks import ModelCheckpoint
 from morph_layers2D import *
 from matplotlib.colors import ListedColormap
 import keras
-
 from generator import *
 from keras.layers import *
 from skimage.morphology import erosion, dilation, opening, closing, white_tophat
@@ -99,23 +98,23 @@ def model_ISI(inp_shape=(256,256,3)):
 
 
 #training of network
-def train_model():
-    #DIBCO DATA
-    model=model_DIBCO(inp_shape=(256,256,3))
-    imgen=ImageSequence_DIBCO(input_size=(256, 256),stride=(120,120),batch_size=4)
+def train_model(epochs=100,DIBCO=True,ISI=False):
+    if(DIBCO==True):
+        #DIBCO DATA
+        model=model_DIBCO(inp_shape=(256,256,3))
+        imgen=ImageSequence_DIBCO(input_size=(256, 256),stride=(120,120),batch_size=4)
 
-    model.load_weights("models/model_weights.h5")
-    model.fit_generator(imgen,epochs=100)
-    model.save_weights("models/model_weights.h5")
-
-    
-
-    #ISI-DATA
-    model=model_ISI(inp_shape=(256,256,3))
-    imgen=ImageSequence_ISI(input_size=(256, 256),stride=(120,120),batch_size=4)
-    #model.load_weights("models/model_weights_isi.h5")
-    model.fit_generator(imgen,epochs=100)
-    model.save_weights("models/model_weights_isi.h5")
+        #model.load_weights("models/model_weights.h5")
+        model.fit_generator(imgen,epochs=epochs)
+        model.save_weights("models/model_weights_dibco.h5")
+     
+    if(ISI==True):
+        #ISI-DATA
+        model=model_ISI(inp_shape=(256,256,3))
+        imgen=ImageSequence_ISI(input_size=(256, 256),stride=(120,120),batch_size=4)
+        #model.load_weights("models/model_weights_isi.h5")
+        model.fit_generator(imgen,epochs=epochs)
+        model.save_weights("models/model_weights_isi.h5")
 
     
 

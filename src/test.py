@@ -37,7 +37,7 @@ for d in os.listdir(INP_PATH_DIR):
 
 
     model=model_DIBCO()
-    model.load_weights("./models/model_weights_DIBCO.h5")
+    model.load_weights("./models/model_weights_dibco.h5")
     #model=model_ISI()
     #model.load_weights("./models/model_weights_isi.h5")
     out_img,_,_=test_img(model,img,patch_size=(256,256,3),stride=(100,100))
