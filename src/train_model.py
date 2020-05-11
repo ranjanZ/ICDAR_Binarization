@@ -92,8 +92,8 @@ def model_ISI(inp_shape=(256,256,3)):
     z3=Conv2D(3,(1,1),padding='same',activation='sigmoid')(z3)
 
     model=Model(inputs=[I],outputs=[z3])
-    #model.compile(loss=DSSIMObjective(kernel_size=100), optimizer="adam",metrics=['mse',DSSIMObjective(kernel_size=100)])
-    model.compile(loss=DSSIM_RGB(kernel_size=100), optimizer="adam",metrics=['mse',DSSIMObjective(kernel_size=100)])
+    model.compile(loss=DSSIMObjective(kernel_size=100), optimizer="adam",metrics=['mse',DSSIMObjective(kernel_size=100)])
+    #model.compile(loss=DSSIM_RGB(kernel_size=100), optimizer="adam",metrics=['mse',DSSIMObjective(kernel_size=100)])
 
     return model
 
